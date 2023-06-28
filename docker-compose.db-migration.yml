@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  auth-db-migration:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile.db.migration
+    networks:
+        - backend
+networks:
+  backend:
+    driver: bridge
+
